@@ -444,7 +444,7 @@ header {
   border-bottom: 1px solid var(--cultured);
 }
 
-.header-logo { margin-bottom: 20px; }
+.header-logo { margin-bottom: 5px; }
 
 .header-logo img { margin: auto; }
 
