@@ -86,8 +86,8 @@ export default function ProductGrid() {
               {p.badge && <p className={`showcase-badge${p.badgeClass ? ' ' + p.badgeClass : ''}`}>{p.badge}</p>}
               <div className="showcase-actions">
                 <button className="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
-                <button className="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
-                <button className="btn-action"><ion-icon name="repeat-outline"></ion-icon></button>
+                {/*<button className="btn-action"><ion-icon name="eye-outline"></ion-icon></button> */}
+                {/*<button className="btn-action"><ion-icon name="repeat-outline"></ion-icon></button>*/}
                 <button className="btn-action"><ion-icon name="bag-add-outline"></ion-icon></button>
               </div>
             </div>

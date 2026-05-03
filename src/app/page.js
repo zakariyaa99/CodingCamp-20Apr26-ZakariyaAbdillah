@@ -15,8 +15,8 @@ import Blog from '@/components/Blog';
 import Footer from '@/components/Footer';
 
 export default function Home() {
-  const [modalClosed, setModalClosed] = useState(false);
-  const [toastClosed, setToastClosed] = useState(false);
+  const [modalClosed, setModalClosed] = useState(true);
+  const [toastClosed, setToastClosed] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
@@ -36,7 +36,7 @@ export default function Home() {
       {/* Main Content */}
       <main>
         <Banner />
-        <CategoryStrip />
+        {/* <CategoryStrip /> */}
 
         {/* Product Container: Sidebar + Product Box */}
         <div className="product-container">
@@ -44,8 +44,8 @@ export default function Home() {
             <Sidebar isOpen={sidebarOpen} onClose={() => setSidebarOpen(false)} />
 
             <div className="product-box">
-              <ProductMinimal />
-              <ProductFeatured />
+              {/*<ProductMinimal />*/}
+              {/*<ProductFeatured />*/}
               <ProductGrid />
             </div>
           </div>

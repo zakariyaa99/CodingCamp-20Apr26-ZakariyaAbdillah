@@ -4,20 +4,20 @@ import { useState } from 'react';
 
 const mobileMenuCategories = [
   {
-    label: "Men's",
-    items: ['Shirt', 'Shorts & Jeans', 'Safety Shoes', 'Wallet'],
+    label: 'Categories',
+    items: ['Solvents', 'Reagents', 'Standards', 'Indicators'],
   },
   {
-    label: "Women's",
-    items: ['Dress & Frock', 'Earrings', 'Necklace', 'Makeup Kit'],
+    label: 'Brands',
+    items: ['Merck', 'Loba Chemie', 'Sigma-Aldrich', 'Spectrochem'],
   },
   {
-    label: 'Jewelry',
-    items: ['Earrings', 'Couple Rings', 'Necklace', 'Bracelets'],
+    label: 'Accecories',
+    items: ['pH Meters', 'Conductivity Meters', 'Spectrophotometers', 'Chromatography Accessories', 'General Laboratory Equipment'],
   },
   {
-    label: 'Perfume',
-    items: ['Clothes Perfume', 'Deodorant', 'Flower Fragrance', 'Air Freshener'],
+    label: 'Lab',
+    items: ['Glassware', 'Chemicals', 'Consumables', 'Equipment'],
   },
 ];
 
@@ -97,7 +97,7 @@ export default function Header({ onMenuOpenForSidebar }) {
               <img src="/images/logo/labkimia_header.png" alt="Labkimia's logo" width="150" height="55" />
             </a>
             <div className="header-search-container">
-              <input type="search" name="search" className="search-field" placeholder="Enter your product name..." />
+              <input type="search" name="search" className="search-field" placeholder="Search your chemical products..." />
               <button className="search-btn">
                 <ion-icon name="search-outline"></ion-icon>
               </button>
@@ -117,22 +117,23 @@ export default function Header({ onMenuOpenForSidebar }) {
             </div>
           </div>
         </div>
+      </header>
 
         {/* DESKTOP NAV */}
         <nav className="desktop-navigation-menu">
           <div className="container">
             <ul className="desktop-menu-category-list">
-
+              {/*this is menu home*/}
               <li className="menu-category">
                 <a href="#" className="menu-title">Home</a>
               </li>
-
+              {/*this is menu categories*/}
               <li className="menu-category">
                 <a href="#" className="menu-title">Categories</a>
                 <div className="dropdown-panel">
                   <ul className="dropdown-panel-list">
-                    <li className="menu-title"><a href="#">Electronics</a></li>
-                    {['Desktop', 'Laptop', 'Camera', 'Tablet', 'Headphone'].map(i => (
+                    <li className="menu-title"><a href="#">Solvents</a></li>
+                    {['Acids', 'Alkalis', 'Salts', 'Indicators', 'Buffer Solutions'].map(i => (
                       <li className="panel-list-item" key={i}><a href="#">{i}</a></li>
                     ))}
                     <li className="panel-list-item">
@@ -140,8 +141,8 @@ export default function Header({ onMenuOpenForSidebar }) {
                     </li>
                   </ul>
                   <ul className="dropdown-panel-list">
-                    <li className="menu-title"><a href="#">Men&apos;s</a></li>
-                    {['Formal', 'Casual', 'Sports', 'Jacket', 'Sunglasses'].map(i => (
+                    <li className="menu-title"><a href="#">Reagents</a></li>
+                    {['General Purpose Reagents', 'Analytical Reagents', 'Chromatography Reagents', 'Spectroscopy Reagents', 'Biotechnology Reagents'].map(i => (
                       <li className="panel-list-item" key={i}><a href="#">{i}</a></li>
                     ))}
                     <li className="panel-list-item">
@@ -149,8 +150,8 @@ export default function Header({ onMenuOpenForSidebar }) {
                     </li>
                   </ul>
                   <ul className="dropdown-panel-list">
-                    <li className="menu-title"><a href="#">Women&apos;s</a></li>
-                    {['Formal', 'Casual', 'Perfume', 'Cosmetics', 'Bags'].map(i => (
+                    <li className="menu-title"><a href="#">Standards</a></li>
+                    {['AAS Standards', 'ICP Standards', 'UV-Vis Standards', 'HPLC Standards', 'GC Standards'].map(i => (
                       <li className="panel-list-item" key={i}><a href="#">{i}</a></li>
                     ))}
                     <li className="panel-list-item">
@@ -158,8 +159,8 @@ export default function Header({ onMenuOpenForSidebar }) {
                     </li>
                   </ul>
                   <ul className="dropdown-panel-list">
-                    <li className="menu-title"><a href="#">Electronics</a></li>
-                    {['Smart Watch', 'Smart TV', 'Keyboard', 'Mouse', 'Microphone'].map(i => (
+                    <li className="menu-title"><a href="#">Indicators</a></li>
+                    {['Acid-Base Indicators', 'Redox Indicators', 'Complexometric Indicators', 'Fluorescent Indicators', 'Other Indicators'].map(i => (
                       <li className="panel-list-item" key={i}><a href="#">{i}</a></li>
                     ))}
                     <li className="panel-list-item">
@@ -168,51 +169,32 @@ export default function Header({ onMenuOpenForSidebar }) {
                   </ul>
                 </div>
               </li>
-
+              {/*this is menu Brands*/}
               <li className="menu-category">
-                <a href="#" className="menu-title">Men&apos;s</a>
+                <a href="#" className="menu-title">Brands</a>
                 <ul className="dropdown-list">
-                  {['Shirt', 'Shorts & Jeans', 'Safety Shoes', 'Wallet'].map(i => (
+                  {['Merck', 'Loba Chemie', 'Sigma-Aldrich', 'Spectrochem'].map(i => (
                     <li className="dropdown-item" key={i}><a href="#">{i}</a></li>
                   ))}
                 </ul>
               </li>
-
+              {/*this is menu Accecories*/}
               <li className="menu-category">
-                <a href="#" className="menu-title">Women&apos;s</a>
+                <a href="#" className="menu-title">Accecories</a>
                 <ul className="dropdown-list">
-                  {['Dress & Frock', 'Earrings', 'Necklace', 'Makeup Kit'].map(i => (
+                  {['pH Meters', 'Conductivity Meters', 'Spectrophotometers', 'Chromatography Accessories', 'General Laboratory Equipment'].map(i => (
+                    <li className="dropdown-item" key={i}><a href="#">{i}</a></li>
+                  ))}
+                </ul>
+              </li>{/*this is menu Lab*/}
+              <li className="menu-category">
+                <a href="#" className="menu-title">Lab</a>
+                <ul className="dropdown-list">
+                  {['Glassware', 'Chemicals', 'Consumables', 'Equipment'].map(i => (
                     <li className="dropdown-item" key={i}><a href="#">{i}</a></li>
                   ))}
                 </ul>
               </li>
-
-              <li className="menu-category">
-                <a href="#" className="menu-title">Jewelry</a>
-                <ul className="dropdown-list">
-                  {['Earrings', 'Couple Rings', 'Necklace', 'Bracelets'].map(i => (
-                    <li className="dropdown-item" key={i}><a href="#">{i}</a></li>
-                  ))}
-                </ul>
-              </li>
-
-              <li className="menu-category">
-                <a href="#" className="menu-title">Perfume</a>
-                <ul className="dropdown-list">
-                  {['Clothes Perfume', 'Deodorant', 'Flower Fragrance', 'Air Freshener'].map(i => (
-                    <li className="dropdown-item" key={i}><a href="#">{i}</a></li>
-                  ))}
-                </ul>
-              </li>
-
-              <li className="menu-category">
-                <a href="#" className="menu-title">Blog</a>
-              </li>
-
-              <li className="menu-category">
-                <a href="#" className="menu-title">Hot Offers</a>
-              </li>
-
             </ul>
           </div>
         </nav>
@@ -260,8 +242,7 @@ export default function Header({ onMenuOpenForSidebar }) {
                 onToggle={() => toggleAccordion(i)}
               />
             ))}
-            <li className="menu-category"><a href="#" className="menu-title">Blog</a></li>
-            <li className="menu-category"><a href="#" className="menu-title">Hot Offers</a></li>
+
           </ul>
 
           <div className="menu-bottom">
@@ -302,7 +283,6 @@ export default function Header({ onMenuOpenForSidebar }) {
           </div>
         </nav>
 
-      </header>
     </>
   );
 }

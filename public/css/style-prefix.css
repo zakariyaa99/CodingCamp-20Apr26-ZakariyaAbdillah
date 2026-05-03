@@ -1522,8 +1522,8 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 .product-grid {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-  grid-template-columns: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 25px;
 }
 
@@ -2701,7 +2701,13 @@ footer {
             border-radius: 20px;
   }
 
-  .desktop-navigation-menu { display: block; }
+  .desktop-navigation-menu {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--white);
+  }
 
   .desktop-menu-category-list {
     position: relative;
